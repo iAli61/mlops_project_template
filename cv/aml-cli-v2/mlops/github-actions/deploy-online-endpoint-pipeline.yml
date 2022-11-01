@@ -19,7 +19,7 @@ jobs:
       secrets:
         creds: ${{secrets.AZURE_CREDENTIALS}}
   create-deployment:
-      uses: Azure/mlops-templates/.github/workflows/create-deployment.yml@main
+      uses: iAli61/mlops-templates/.github/workflows/create-deployment.yml@main
       needs: [get-config,create-endpoint]
       with:
         resource_group: ${{ needs.get-config.outputs.resource_group }}
@@ -31,7 +31,7 @@ jobs:
       secrets:
         creds: ${{secrets.AZURE_CREDENTIALS}}
   allocate-traffic:
-      uses: Azure/mlops-templates/.github/workflows/allocate-traffic.yml@main
+      uses: iAli61/mlops-templates/.github/workflows/allocate-traffic.yml@main
       needs: [get-config,create-deployment]
       with:
         resource_group: ${{ needs.get-config.outputs.resource_group }}

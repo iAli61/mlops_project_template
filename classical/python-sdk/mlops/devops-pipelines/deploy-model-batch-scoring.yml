@@ -22,7 +22,7 @@ resources:
   repositories:
     - repository: mlops-templates  # Template Repo
       name: Azure/mlops-templates
-      endpoint: github-connection # need to set up and hardcode
+      endpoint: mlops-cliv2 # need to set up and hardcode
       type: github
       ref: main
 
